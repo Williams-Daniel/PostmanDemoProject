@@ -30,7 +30,16 @@ const SignIn = () => {
               </LeftSide>
               Forgot Password?
             </ForgotPassword>
-            <GButton text="Sign in" bg="#F26B3A" col="white" MT="20px" hovcol="#ff6027"/>
+            <GButton
+              text="Sign in"
+              bg="#F26B3A"
+              col="white"
+              MT="20px"
+              hovcol="#ff6027"
+              height="43px"
+              width="331px"
+              fns="15px"
+            />
             <LineDiv>
               <Ln></Ln>
               <OR>or</OR>
@@ -45,8 +54,19 @@ const SignIn = () => {
               GL={GoogleLogo}
               text="Sign in with Google"
               MT="10px"
+              height="43px"
+              width="331px"
+              fns="15px"
             />
-            <GButton text="Sign in with SSO" bg="#F2F2F2" col="#6B6B6B" MT="20px" />
+            <GButton
+              text="Sign in with SSO"
+              bg="#F2F2F2"
+              col="#6B6B6B"
+              MT="20px"
+              height="43px"
+              width="331px"
+              fns="15px"
+            />
           </Main>
         </Body>
       </Container>
@@ -106,7 +126,9 @@ const ForgotPassword = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4285f4;
   margin-top: 15px;
 `;
 const LeftSide = styled.div`
@@ -126,7 +148,9 @@ const Box = styled.div`
 `;
 const Icon = styled.img``;
 const Text = styled.div`
-  font-size: 14px;
+  font-size: 13px;
+  color: black;
+  font-weight: 400;
 `;
 const LineDiv = styled.div`
   width: 100%;

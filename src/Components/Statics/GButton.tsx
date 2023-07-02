@@ -11,6 +11,11 @@ export  interface Ibutton{
     col?:string,
     hovcol?:string,
     MT?:string
+    width?:string
+    height?:string
+    fns?:string
+    fnw?:string
+    Border?:string
 }
 const GButton:React.FC<Ibutton> = (
     {
@@ -21,22 +26,33 @@ const GButton:React.FC<Ibutton> = (
         text,
         col,
         hovcol,
-        MT
+        MT,
+        width,
+        height,
+        fns,
+        fnw,
+        Border
     }
 )=>{
     return(
         <div>
             <Container
+            width={`${width}`}
+            fns={`${fns}`}
+            height={`${height}`}
             bg={`${bg}`}
             col={`${col}`}
             hovcol={`${hovcol}`}
             MT={`${MT}`}
+            Border={`${Border}`}
             >
                 <LogoDiv
                 wid={`${wid}`}
                 hei={`${hei}`}
                 ><LOgo src={GL}/></LogoDiv>
                 <Text
+                fns={`${fns}`}
+                fnw={`${fnw}`}
                 col={`${col}`}
                 >{text}</Text>
             </Container>
@@ -46,26 +62,26 @@ const GButton:React.FC<Ibutton> = (
 
 export default GButton
 
-const Container = styled.div<{bg:string,col:string,MT:string,hovcol:string}>`
-width: 331px;
-height: 43px;
+const Container = styled.div<{bg:string,col:string,MT:string,hovcol:string,width:string,height:string,fns:string, Border:string}>`
+width: ${({width})=>width};
+height: ${({height})=>height};
 border-radius: 3px;
 background-color: ${({bg})=>bg};
 display: flex;
 align-items: center;
 justify-content: center;
 margin-top: ${({MT})=>MT};
+border: ${({Border})=>Border};
 :hover{
     background-color: ${({hovcol})=>hovcol};
 }
 `
-const Text = styled.div<{col:string}>`
-font-size: 15px;
+const Text = styled.div<{col:string,fns:string,fnw:string}>`
+font-size: ${({fns})=>fns};
+font-weight: ${({fnw})=>fnw};
 color: ${({col})=>col};
 `
 const LOgo = styled.img`
-width: 16pxpx;
-height: 16px;
 object-fit: contain;
 `
 const LogoDiv = styled.div<{wid:string,hei:string}>`
