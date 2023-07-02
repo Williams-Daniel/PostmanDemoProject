@@ -16,6 +16,7 @@ export  interface Ibutton{
     fns?:string
     fnw?:string
     Border?:string
+    brad?:string
 }
 const GButton:React.FC<Ibutton> = (
     {
@@ -31,7 +32,8 @@ const GButton:React.FC<Ibutton> = (
         height,
         fns,
         fnw,
-        Border
+        Border,
+        brad
     }
 )=>{
     return(
@@ -45,6 +47,7 @@ const GButton:React.FC<Ibutton> = (
             hovcol={`${hovcol}`}
             MT={`${MT}`}
             Border={`${Border}`}
+            brad={`${brad}`}
             >
                 <LogoDiv
                 wid={`${wid}`}
@@ -62,10 +65,10 @@ const GButton:React.FC<Ibutton> = (
 
 export default GButton
 
-const Container = styled.div<{bg:string,col:string,MT:string,hovcol:string,width:string,height:string,fns:string, Border:string}>`
+const Container = styled.div<{bg:string,col:string,MT:string,hovcol:string,width:string,height:string,fns:string, Border:string,brad:string}>`
 width: ${({width})=>width};
 height: ${({height})=>height};
-border-radius: 3px;
+border-radius: ${({brad})=>brad};
 background-color: ${({bg})=>bg};
 display: flex;
 align-items: center;

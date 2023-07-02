@@ -52,6 +52,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 10;
 `;
 const Main = styled.div`
   height: 100%;

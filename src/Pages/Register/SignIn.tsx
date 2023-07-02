@@ -39,6 +39,7 @@ const SignIn = () => {
               height="43px"
               width="331px"
               fns="15px"
+              brad="3px"
             />
             <LineDiv>
               <Ln></Ln>
@@ -57,6 +58,7 @@ const SignIn = () => {
               height="43px"
               width="331px"
               fns="15px"
+              brad="3px"
             />
             <GButton
               text="Sign in with SSO"
@@ -66,6 +68,7 @@ const SignIn = () => {
               height="43px"
               width="331px"
               fns="15px"
+              brad="3px"
             />
           </Main>
         </Body>

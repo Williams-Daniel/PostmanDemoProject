@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import SignIn from "./Register/SignIn";
+import Hero from "./Hero";
 
 const HomeScreen = () => {
   return <div>
     <Container>
         <Main>
+          <Hero/>
         </Main>
     </Container>
   </div>;
@@ -18,7 +20,7 @@ const Container = styled.div`
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 `
 
 const Main = styled.div`
